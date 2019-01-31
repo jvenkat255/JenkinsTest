@@ -15,7 +15,7 @@ pipeline {
       steps {
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], 
         doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], 
-        userRemoteConfigs: [[credentialsId: 'jvenkat255', url: 'https://github.com/jvenkat255/gradle-git-sonarqube.git']]])
+        userRemoteConfigs: [[credentialsId: 'jvenkat255', url: 'https://github.com/jvenkat255/JenkinsTest.git']]])
         }
     }
     
