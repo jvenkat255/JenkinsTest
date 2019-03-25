@@ -17,7 +17,8 @@ pipeline {
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], 
         doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], 
         userRemoteConfigs: [[credentialsId: 'jvenkat255', url: 'https://github.com/jvenkat255/JenkinsTest.git']]])
-        }
+        pipelineScripts = load ("Sonarqube.groovy")
+      }
     }
     
  stage('Sonarqube') {
