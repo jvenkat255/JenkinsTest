@@ -1,4 +1,4 @@
-def Sonarqube
+//def Sonarqube
 pipeline {
 	agent { label 'ATG'}
      options { 
@@ -17,7 +17,7 @@ pipeline {
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], 
         doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], 
         userRemoteConfigs: [[credentialsId: 'jvenkat255', url: 'https://github.com/jvenkat255/JenkinsTest.git']]])
-        pipelineScripts = load ("Sonarqube.groovy")
+        //pipelineScripts = load ("Sonarqube.groovy")
       }
     }
     
