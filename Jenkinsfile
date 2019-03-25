@@ -1,3 +1,4 @@
+def Sonarqube
 pipeline {
 	agent { label 'ATG'}
      options { 
