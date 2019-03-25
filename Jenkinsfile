@@ -28,7 +28,7 @@ pipeline {
     steps {
         withSonarQubeEnv('sonarqube_atg') {
             //bat "${scannerHome}/bin/sonar-scanner"
-            bat "gradlew sonarqube"
+            bat "gradlew -i sonarqube"
         }
         //timeout(time: 1, unit: 'MINUTES') {
           //  waitForQualityGate abortPipeline: true
